@@ -4,6 +4,7 @@ var SPEED = -200
 var DAMAGE = 10
 var CAN_DIE = true
 var _err = ''
+var DamageText = preload("res://Scenes/Projectile/DamageIndecator/Damage.tscn")
 
 func _ready():
 	self.add_to_group("Projectile")
@@ -18,6 +19,11 @@ func _physics_process(delta):
 
 func _on_area_entered(area):
 	if area.is_in_group("Enemy"):
+		var DamageTextTscn = DamageText.instance()
+		DamageTextTscn.text = str(DAMAGE)
+		area.add_child(DamageTextTscn)
+		
+		
 		area.HEALTH = area.HEALTH - DAMAGE
 		$Audio_Impact.play()
 		if CAN_DIE :
