@@ -33,12 +33,12 @@
 - 2021/09/01 add sound on enemies death
 - 2021/09/02 balance game sound
 - 2021/09/05 setup git Repo
+- 2021/09/05 Bullet Damage indicator on hit
+- 2021/09/05 Drops add Flashing effect 
 
 ### TO DO
 - Level Display (5 x Levels) on level start
 - Save Score Local with a name
-- Bullet Damage indecator on hit
-- Drops add Flashing effect 
 
 ### Look At
 - N/A
