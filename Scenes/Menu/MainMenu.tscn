@@ -67,20 +67,20 @@ __meta__ = {
 }
 
 [node name="menuName" type="Label" parent="NinePatchRect/VBoxContainer"]
-margin_right = 334.0
+margin_right = 330.0
 margin_bottom = 18.0
 custom_fonts/font = ExtResource( 7 )
 text = "Main Menu"
 
 [node name="MarginContainer" type="MarginContainer" parent="NinePatchRect/VBoxContainer"]
 margin_top = 22.0
-margin_right = 334.0
+margin_right = 330.0
 margin_bottom = 52.0
 rect_min_size = Vector2( 0, 30 )
 
 [node name="title" type="Label" parent="NinePatchRect/VBoxContainer"]
 margin_top = 56.0
-margin_right = 334.0
+margin_right = 330.0
 margin_bottom = 110.0
 custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -90,7 +90,7 @@ valign = 1
 
 [node name="lb_score" type="Label" parent="NinePatchRect/VBoxContainer"]
 margin_top = 114.0
-margin_right = 334.0
+margin_right = 330.0
 margin_bottom = 175.0
 mouse_filter = 0
 input_pass_on_modal_close_click = false
@@ -105,7 +105,7 @@ __meta__ = {
 
 [node name="score_Name" type="Label" parent="NinePatchRect/VBoxContainer"]
 margin_top = 179.0
-margin_right = 334.0
+margin_right = 330.0
 margin_bottom = 210.0
 mouse_filter = 0
 input_pass_on_modal_close_click = false
@@ -118,7 +118,7 @@ __meta__ = {
 
 [node name="MarginContainer2" type="MarginContainer" parent="NinePatchRect/VBoxContainer"]
 margin_top = 214.0
-margin_right = 334.0
+margin_right = 330.0
 margin_bottom = 234.0
 rect_min_size = Vector2( 55, 20 )
 __meta__ = {
@@ -127,7 +127,7 @@ __meta__ = {
 
 [node name="playBtn" type="TextureButton" parent="NinePatchRect/VBoxContainer"]
 margin_top = 238.0
-margin_right = 334.0
+margin_right = 330.0
 margin_bottom = 293.0
 rect_min_size = Vector2( 0, 55 )
 texture_normal = ExtResource( 4 )
@@ -148,7 +148,7 @@ __meta__ = {
 
 [node name="MarginContainer3" type="MarginContainer" parent="NinePatchRect/VBoxContainer"]
 margin_top = 297.0
-margin_right = 334.0
+margin_right = 330.0
 margin_bottom = 317.0
 rect_min_size = Vector2( 55, 20 )
 __meta__ = {
@@ -157,7 +157,7 @@ __meta__ = {
 
 [node name="settingsBtn" type="TextureButton" parent="NinePatchRect/VBoxContainer"]
 margin_top = 321.0
-margin_right = 334.0
+margin_right = 330.0
 margin_bottom = 376.0
 rect_min_size = Vector2( 0, 55 )
 texture_normal = ExtResource( 3 )
@@ -178,7 +178,7 @@ __meta__ = {
 
 [node name="MarginContainer4" type="MarginContainer" parent="NinePatchRect/VBoxContainer"]
 margin_top = 380.0
-margin_right = 334.0
+margin_right = 330.0
 margin_bottom = 400.0
 rect_min_size = Vector2( 55, 20 )
 __meta__ = {
@@ -187,7 +187,7 @@ __meta__ = {
 
 [node name="ShareBtn" type="TextureButton" parent="NinePatchRect/VBoxContainer"]
 margin_top = 404.0
-margin_right = 334.0
+margin_right = 330.0
 margin_bottom = 459.0
 rect_min_size = Vector2( 0, 55 )
 texture_normal = ExtResource( 2 )
@@ -222,7 +222,7 @@ __meta__ = {
 
 [node name="MarginContainer5" type="MarginContainer" parent="NinePatchRect/VBoxContainer"]
 margin_top = 463.0
-margin_right = 334.0
+margin_right = 330.0
 margin_bottom = 483.0
 rect_min_size = Vector2( 55, 20 )
 __meta__ = {
@@ -231,7 +231,7 @@ __meta__ = {
 
 [node name="quitBtn" type="TextureButton" parent="NinePatchRect/VBoxContainer"]
 margin_top = 487.0
-margin_right = 334.0
+margin_right = 330.0
 margin_bottom = 542.0
 rect_min_size = Vector2( 0, 55 )
 texture_normal = ExtResource( 10 )
@@ -252,7 +252,7 @@ __meta__ = {
 
 [node name="MarginContainer6" type="MarginContainer" parent="NinePatchRect/VBoxContainer"]
 margin_top = 546.0
-margin_right = 334.0
+margin_right = 330.0
 margin_bottom = 556.0
 rect_min_size = Vector2( 55, 10 )
 __meta__ = {
@@ -261,15 +261,15 @@ __meta__ = {
 
 [node name="Version" type="Label" parent="NinePatchRect/VBoxContainer"]
 margin_top = 560.0
-margin_right = 334.0
+margin_right = 330.0
 margin_bottom = 578.0
 custom_fonts/font = ExtResource( 7 )
-text = "alpha 0.4"
+text = "Version 1"
 align = 2
 
 [node name="MarginContainer7" type="MarginContainer" parent="NinePatchRect/VBoxContainer"]
 margin_top = 582.0
-margin_right = 334.0
+margin_right = 330.0
 margin_bottom = 602.0
 rect_min_size = Vector2( 55, 20 )
 __meta__ = {
@@ -278,7 +278,7 @@ __meta__ = {
 
 [node name="Credits" type="Label" parent="NinePatchRect/VBoxContainer"]
 margin_top = 606.0
-margin_right = 334.0
+margin_right = 330.0
 margin_bottom = 637.0
 custom_colors/font_color = Color( 1, 1, 1, 0.247059 )
 text = "ART: www.kenney.nl

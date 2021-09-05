@@ -3,7 +3,7 @@
 [ext_resource path="res://Scenes/Projectile/DamageIndecator/Damage.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Fonts/projectile_damage_10.tres" type="DynamicFont" id=2]
 
-[node name="Label" type="Label"]
+[node name="DamageIndecator" type="Label"]
 margin_right = 40.0
 margin_bottom = 14.0
 custom_fonts/font = ExtResource( 2 )

@@ -1,6 +1,6 @@
 extends Node
 
-var SCORE = 0
+var SCORE = 18
 
 func set_Volume(db):
 	$GameMusic.set_volume_db(db)
