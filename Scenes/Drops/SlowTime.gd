@@ -20,7 +20,7 @@ func StartSlowTime() :
 	SPEED = 0
 	
 	$CollisionShape2D.queue_free()
-	$base.visible = false
+	$TextureRect.visible = false
 	$icon.visible = false
 	
 	

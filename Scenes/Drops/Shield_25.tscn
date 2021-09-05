@@ -15,16 +15,9 @@ script = ExtResource( 1 )
 shape = SubResource( 1 )
 one_way_collision = true
 
-[node name="TextureRect" type="TextureRect" parent="."]
-margin_left = -20.0
-margin_top = -20.0
-margin_right = 20.0
-margin_bottom = 20.0
+[node name="TextureRect" type="Sprite" parent="."]
+scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 2 )
-expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="."]
 margin_left = -20.0

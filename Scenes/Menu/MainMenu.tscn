@@ -260,8 +260,7 @@ margin_top = 179.0
 margin_right = 373.0
 margin_bottom = 247.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "TODO:  Level Display (5L), Save Score Local
-Bullet Damage indecator, Drops Flash, "
+text = "TODO:  Level Display (5L), Save Score Local"
 __meta__ = {
 "_edit_use_anchors_": false
 }

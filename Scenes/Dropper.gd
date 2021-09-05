@@ -45,7 +45,7 @@ export var DROPS_LIST =  [
 	'SlowTime',
 	]
 	
-export var SPAWN_RATE =  2000 #22
+export var SPAWN_RATE = 22
 
 func _ready():
 	$Timer.wait_time = SPAWN_RATE;
