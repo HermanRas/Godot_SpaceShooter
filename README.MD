@@ -1,9 +1,15 @@
-#Godot SpaceShooter
-##Menu
+# Godot SpaceShooter
+
+## Menu
+
 <img src="https://github.com/HermanRas/Godot_SpaceShooter/blob/main/Assets/Git/Menu.jpg" alt="#Godot_SpaceShooter">
-##Game
+
+## Game
+
 <img src="https://github.com/HermanRas/Godot_SpaceShooter/blob/main/Assets/Git/Game.jpg" alt="#Godot_SpaceShooter">
-##Score
+
+## Score
+
 <img src="https://github.com/HermanRas/Godot_SpaceShooter/blob/main/Assets/Git/Score.jpg" alt="#Godot_SpaceShooter">
 
 ### FrameWork 
