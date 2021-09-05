@@ -35,10 +35,10 @@
 - 2021/09/05 setup git Repo
 - 2021/09/05 Bullet Damage indicator on hit
 - 2021/09/05 Drops add Flashing effect 
+- 2021/09/05 Save Score Local with a name
 
 ### TO DO
 - Level Display (5 x Levels) on level start
-- Save Score Local with a name
 
 ### Look At
 - N/A

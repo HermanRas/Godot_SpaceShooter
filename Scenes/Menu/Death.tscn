@@ -92,10 +92,24 @@ text = "Space"
 align = 1
 valign = 1
 
-[node name="lb_score" type="Label" parent="NinePatchRect/VBoxContainer"]
+[node name="Label2" type="Label" parent="NinePatchRect/VBoxContainer"]
 margin_top = 114.0
 margin_right = 330.0
 margin_bottom = 175.0
+mouse_filter = 0
+input_pass_on_modal_close_click = false
+custom_fonts/font = ExtResource( 1 )
+text = "You Died !"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lb_score" type="Label" parent="NinePatchRect/VBoxContainer"]
+margin_top = 179.0
+margin_right = 330.0
+margin_bottom = 240.0
 mouse_filter = 0
 input_pass_on_modal_close_click = false
 custom_fonts/font = ExtResource( 1 )
@@ -107,33 +121,58 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label2" type="Label" parent="NinePatchRect/VBoxContainer"]
-margin_top = 179.0
+[node name="MarginContainer1" type="MarginContainer" parent="NinePatchRect/VBoxContainer"]
+margin_top = 244.0
 margin_right = 330.0
-margin_bottom = 240.0
-mouse_filter = 0
-input_pass_on_modal_close_click = false
-custom_fonts/font = ExtResource( 1 )
-text = "You Died !"
+margin_bottom = 254.0
+rect_min_size = Vector2( 55, 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit" type="TextEdit" parent="NinePatchRect/VBoxContainer"]
+margin_top = 258.0
+margin_right = 330.0
+margin_bottom = 291.0
+rect_min_size = Vector2( 0, 33 )
+hint_tooltip = "NAME"
+custom_fonts/font = ExtResource( 9 )
+text = "NAME"
+
+[node name="saveBtn" type="TextureButton" parent="NinePatchRect/VBoxContainer"]
+margin_top = 295.0
+margin_right = 330.0
+margin_bottom = 350.0
+rect_min_size = Vector2( 0, 55 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 6 )
+expand = true
+
+[node name="label" type="Label" parent="NinePatchRect/VBoxContainer/saveBtn"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 10 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "SAVE SCORE"
 align = 1
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MarginContainer1" type="MarginContainer" parent="NinePatchRect/VBoxContainer"]
-margin_top = 244.0
+[node name="MarginContainer2" type="MarginContainer" parent="NinePatchRect/VBoxContainer"]
+margin_top = 354.0
 margin_right = 330.0
-margin_bottom = 274.0
-rect_min_size = Vector2( 55, 30 )
+margin_bottom = 364.0
+rect_min_size = Vector2( 55, 10 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ShareBtn" type="TextureButton" parent="NinePatchRect/VBoxContainer"]
-margin_top = 278.0
+margin_top = 368.0
 margin_right = 330.0
-margin_bottom = 333.0
+margin_bottom = 423.0
 rect_min_size = Vector2( 0, 55 )
 texture_normal = ExtResource( 7 )
 texture_pressed = ExtResource( 6 )
@@ -167,19 +206,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MarginContainer2" type="MarginContainer" parent="NinePatchRect/VBoxContainer"]
-margin_top = 337.0
+[node name="MarginContainer3" type="MarginContainer" parent="NinePatchRect/VBoxContainer"]
+margin_top = 427.0
 margin_right = 330.0
-margin_bottom = 367.0
-rect_min_size = Vector2( 55, 30 )
+margin_bottom = 437.0
+rect_min_size = Vector2( 55, 10 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="playBtn" type="TextureButton" parent="NinePatchRect/VBoxContainer"]
-margin_top = 371.0
+margin_top = 441.0
 margin_right = 330.0
-margin_bottom = 426.0
+margin_bottom = 496.0
 rect_min_size = Vector2( 0, 55 )
 texture_normal = ExtResource( 6 )
 texture_pressed = ExtResource( 4 )
@@ -198,18 +237,18 @@ __meta__ = {
 }
 
 [node name="MarginContainer4" type="MarginContainer" parent="NinePatchRect/VBoxContainer"]
-margin_top = 430.0
+margin_top = 500.0
 margin_right = 330.0
-margin_bottom = 460.0
-rect_min_size = Vector2( 55, 30 )
+margin_bottom = 510.0
+rect_min_size = Vector2( 55, 10 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="quitBtn" type="TextureButton" parent="NinePatchRect/VBoxContainer"]
-margin_top = 464.0
+margin_top = 514.0
 margin_right = 330.0
-margin_bottom = 519.0
+margin_bottom = 569.0
 rect_min_size = Vector2( 0, 55 )
 texture_normal = ExtResource( 12 )
 texture_pressed = ExtResource( 7 )
@@ -228,23 +267,23 @@ __meta__ = {
 }
 
 [node name="MarginContainer5" type="MarginContainer" parent="NinePatchRect/VBoxContainer"]
-margin_top = 523.0
+margin_top = 573.0
 margin_right = 330.0
-margin_bottom = 553.0
-rect_min_size = Vector2( 55, 30 )
+margin_bottom = 583.0
+rect_min_size = Vector2( 55, 10 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="NinePatchRect/VBoxContainer"]
-margin_top = 557.0
+margin_top = 587.0
 margin_right = 330.0
-margin_bottom = 575.0
+margin_bottom = 605.0
 custom_fonts/font = ExtResource( 9 )
 text = "alpha 0.3"
 align = 2
 
-[connection signal="gui_input" from="NinePatchRect/VBoxContainer/lb_score" to="." method="_on_Label_gui_input"]
+[connection signal="pressed" from="NinePatchRect/VBoxContainer/saveBtn" to="." method="_on_saveBtn_pressed"]
 [connection signal="pressed" from="NinePatchRect/VBoxContainer/ShareBtn" to="." method="_on_ShareBtn_pressed"]
 [connection signal="pressed" from="NinePatchRect/VBoxContainer/playBtn" to="." method="_on_playBtn_pressed"]
 [connection signal="pressed" from="NinePatchRect/VBoxContainer/quitBtn" to="." method="_on_quitBtn_pressed"]

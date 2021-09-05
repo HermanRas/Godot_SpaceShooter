@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scenes/Menu/menu_bg.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Images/Menu/barHorizontal_yellow_mid.png" type="Texture" id=2]
@@ -10,6 +10,8 @@
 [ext_resource path="res://Assets/Fonts/pageBtn.tres" type="DynamicFont" id=8]
 [ext_resource path="res://Assets/Images/Menu/WA.png" type="Texture" id=9]
 [ext_resource path="res://Assets/Images/Menu/barHorizontal_red_mid.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Fonts/Death_font_48.tres" type="DynamicFont" id=11]
+[ext_resource path="res://Assets/Fonts/High_Score.tres" type="DynamicFont" id=12]
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
@@ -65,20 +67,20 @@ __meta__ = {
 }
 
 [node name="menuName" type="Label" parent="NinePatchRect/VBoxContainer"]
-margin_right = 330.0
+margin_right = 334.0
 margin_bottom = 18.0
 custom_fonts/font = ExtResource( 7 )
 text = "Main Menu"
 
 [node name="MarginContainer" type="MarginContainer" parent="NinePatchRect/VBoxContainer"]
 margin_top = 22.0
-margin_right = 330.0
+margin_right = 334.0
 margin_bottom = 52.0
 rect_min_size = Vector2( 0, 30 )
 
 [node name="title" type="Label" parent="NinePatchRect/VBoxContainer"]
 margin_top = 56.0
-margin_right = 330.0
+margin_right = 334.0
 margin_bottom = 110.0
 custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -86,19 +88,47 @@ text = "Space"
 align = 1
 valign = 1
 
-[node name="MarginContainer2" type="MarginContainer" parent="NinePatchRect/VBoxContainer"]
+[node name="lb_score" type="Label" parent="NinePatchRect/VBoxContainer"]
 margin_top = 114.0
-margin_right = 330.0
-margin_bottom = 180.0
-rect_min_size = Vector2( 55, 66 )
+margin_right = 334.0
+margin_bottom = 175.0
+mouse_filter = 0
+input_pass_on_modal_close_click = false
+custom_fonts/font = ExtResource( 11 )
+custom_colors/font_color = Color( 0.113725, 0.541176, 0.0509804, 1 )
+custom_colors/font_outline_modulate = Color( 0.607843, 1, 0.180392, 1 )
+text = "High Score:"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="score_Name" type="Label" parent="NinePatchRect/VBoxContainer"]
+margin_top = 179.0
+margin_right = 334.0
+margin_bottom = 210.0
+mouse_filter = 0
+input_pass_on_modal_close_click = false
+custom_fonts/font = ExtResource( 12 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer2" type="MarginContainer" parent="NinePatchRect/VBoxContainer"]
+margin_top = 214.0
+margin_right = 334.0
+margin_bottom = 234.0
+rect_min_size = Vector2( 55, 20 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="playBtn" type="TextureButton" parent="NinePatchRect/VBoxContainer"]
-margin_top = 184.0
-margin_right = 330.0
-margin_bottom = 239.0
+margin_top = 238.0
+margin_right = 334.0
+margin_bottom = 293.0
 rect_min_size = Vector2( 0, 55 )
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 3 )
@@ -117,18 +147,18 @@ __meta__ = {
 }
 
 [node name="MarginContainer3" type="MarginContainer" parent="NinePatchRect/VBoxContainer"]
-margin_top = 243.0
-margin_right = 330.0
-margin_bottom = 273.0
-rect_min_size = Vector2( 55, 30 )
+margin_top = 297.0
+margin_right = 334.0
+margin_bottom = 317.0
+rect_min_size = Vector2( 55, 20 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="settingsBtn" type="TextureButton" parent="NinePatchRect/VBoxContainer"]
-margin_top = 277.0
-margin_right = 330.0
-margin_bottom = 332.0
+margin_top = 321.0
+margin_right = 334.0
+margin_bottom = 376.0
 rect_min_size = Vector2( 0, 55 )
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 4 )
@@ -147,18 +177,18 @@ __meta__ = {
 }
 
 [node name="MarginContainer4" type="MarginContainer" parent="NinePatchRect/VBoxContainer"]
-margin_top = 336.0
-margin_right = 330.0
-margin_bottom = 366.0
-rect_min_size = Vector2( 55, 30 )
+margin_top = 380.0
+margin_right = 334.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 55, 20 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ShareBtn" type="TextureButton" parent="NinePatchRect/VBoxContainer"]
-margin_top = 370.0
-margin_right = 330.0
-margin_bottom = 425.0
+margin_top = 404.0
+margin_right = 334.0
+margin_bottom = 459.0
 rect_min_size = Vector2( 0, 55 )
 texture_normal = ExtResource( 2 )
 texture_pressed = ExtResource( 3 )
@@ -191,18 +221,18 @@ __meta__ = {
 }
 
 [node name="MarginContainer5" type="MarginContainer" parent="NinePatchRect/VBoxContainer"]
-margin_top = 429.0
-margin_right = 330.0
-margin_bottom = 459.0
-rect_min_size = Vector2( 55, 30 )
+margin_top = 463.0
+margin_right = 334.0
+margin_bottom = 483.0
+rect_min_size = Vector2( 55, 20 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="quitBtn" type="TextureButton" parent="NinePatchRect/VBoxContainer"]
-margin_top = 463.0
-margin_right = 330.0
-margin_bottom = 518.0
+margin_top = 487.0
+margin_right = 334.0
+margin_bottom = 542.0
 rect_min_size = Vector2( 0, 55 )
 texture_normal = ExtResource( 10 )
 texture_pressed = ExtResource( 2 )
@@ -221,49 +251,38 @@ __meta__ = {
 }
 
 [node name="MarginContainer6" type="MarginContainer" parent="NinePatchRect/VBoxContainer"]
-margin_top = 522.0
-margin_right = 330.0
-margin_bottom = 552.0
-rect_min_size = Vector2( 55, 30 )
+margin_top = 546.0
+margin_right = 334.0
+margin_bottom = 556.0
+rect_min_size = Vector2( 55, 10 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Version" type="Label" parent="NinePatchRect/VBoxContainer"]
-margin_top = 556.0
-margin_right = 330.0
-margin_bottom = 574.0
+margin_top = 560.0
+margin_right = 334.0
+margin_bottom = 578.0
 custom_fonts/font = ExtResource( 7 )
 text = "alpha 0.4"
 align = 2
 
 [node name="MarginContainer7" type="MarginContainer" parent="NinePatchRect/VBoxContainer"]
-margin_top = 578.0
-margin_right = 330.0
-margin_bottom = 608.0
-rect_min_size = Vector2( 55, 30 )
+margin_top = 582.0
+margin_right = 334.0
+margin_bottom = 602.0
+rect_min_size = Vector2( 55, 20 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Credits" type="Label" parent="NinePatchRect/VBoxContainer"]
-margin_top = 612.0
-margin_right = 330.0
-margin_bottom = 643.0
+margin_top = 606.0
+margin_right = 334.0
+margin_bottom = 637.0
 custom_colors/font_color = Color( 1, 1, 1, 0.247059 )
 text = "ART: www.kenney.nl
 Sound: www.opengameart.org"
-
-[node name="Label" type="Label" parent="."]
-margin_left = 42.0
-margin_top = 179.0
-margin_right = 373.0
-margin_bottom = 247.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "TODO:  Level Display (5L), Save Score Local"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [connection signal="pressed" from="NinePatchRect/VBoxContainer/playBtn" to="." method="_on_playBtn_pressed"]
 [connection signal="pressed" from="NinePatchRect/VBoxContainer/settingsBtn" to="." method="_on_settingsBtn_pressed"]
