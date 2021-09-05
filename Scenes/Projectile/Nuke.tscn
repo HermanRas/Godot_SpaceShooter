@@ -1,0 +1,46 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Assets/Images/Nuke/ufoGreen.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Projectile/Nuke.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Audio/spaceEngine_000.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Assets/Images/Nuke/ufoRed.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Audio/explosionCrunch_003.ogg" type="AudioStream" id=5]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+
+[node name="Nuke" type="Area2D"]
+script = ExtResource( 2 )
+
+[node name="TextureRect" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 1 )
+frame = 1
+speed_scale = 0.5
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2( 0.1, 0.1 )
+shape = SubResource( 2 )
+
+[node name="TTL-Timer" type="Timer" parent="."]
+wait_time = 3.0
+
+[node name="Audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
+
+[node name="Audio_Impact" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = 3.0
+pitch_scale = 2.55
+
+[connection signal="timeout" from="TTL-Timer" to="." method="_on_TTLTimer_timeout"]
+[connection signal="finished" from="Audio_Impact" to="." method="_on_Audio_Impact_finished"]

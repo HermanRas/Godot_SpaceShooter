@@ -1,0 +1,155 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Assets/Fonts/HUD_font_14.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Assets/Images/HUD/powerupGreen_shield.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Images/HUD/powerupBlue_bolt.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Images/HUD/powerupRed_star.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/HUD.gd" type="Script" id=5]
+[ext_resource path="res://Assets/Images/star1.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Images/HUD/powerupYellow.png" type="Texture" id=7]
+
+[node name="HUD" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShipStats" type="HBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -207.0
+margin_top = 3.0
+margin_right = 207.0
+margin_bottom = 43.0
+rect_min_size = Vector2( 414, 0 )
+custom_constants/separation = 10
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Health" type="Control" parent="ShipStats"]
+margin_left = 24.0
+margin_right = 108.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 84, 0 )
+mouse_filter = 2
+
+[node name="Icon" type="TextureRect" parent="ShipStats/Health"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ShipStats/Health"]
+margin_left = 42.0
+margin_right = 82.0
+margin_bottom = 40.0
+custom_fonts/font = ExtResource( 1 )
+text = "100"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Shield" type="Control" parent="ShipStats"]
+margin_left = 118.0
+margin_right = 202.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 84, 0 )
+mouse_filter = 2
+
+[node name="Icon" type="TextureRect" parent="ShipStats/Shield"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ShipStats/Shield"]
+margin_left = 42.0
+margin_right = 82.0
+margin_bottom = 40.0
+custom_fonts/font = ExtResource( 1 )
+text = "100"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Speed" type="Control" parent="ShipStats"]
+margin_left = 212.0
+margin_right = 296.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 84, 0 )
+mouse_filter = 2
+
+[node name="Icon" type="TextureRect" parent="ShipStats/Speed"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ShipStats/Speed"]
+margin_left = 42.0
+margin_right = 82.0
+margin_bottom = 40.0
+custom_fonts/font = ExtResource( 1 )
+text = "10"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="Control" parent="ShipStats"]
+margin_left = 306.0
+margin_right = 390.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 84, 0 )
+mouse_filter = 2
+
+[node name="Icon" type="TextureRect" parent="ShipStats/Score"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cursor" type="TextureRect" parent="ShipStats/Score/Icon"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 6 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ShipStats/Score"]
+margin_left = 42.0
+margin_right = 82.0
+margin_bottom = 40.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "5"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

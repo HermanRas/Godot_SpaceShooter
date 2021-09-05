@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Audio/Orbital Colossus.ogg" type="AudioStream" id=1]
+[ext_resource path="res://Scenes/Global.gd" type="Script" id=2]
+
+[node name="Global" type="Node"]
+script = ExtResource( 2 )
+
+[node name="GameMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )

@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/Images/Lasers/laserRedLg.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Projectile/LaserBeem.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Audio/engineCircular_000.ogg" type="AudioStream" id=3]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 0.947611
+height = 200.0
+
+[node name="LaserBeem" type="Area2D"]
+script = ExtResource( 2 )
+
+[node name="TextureRect" type="Sprite" parent="."]
+position = Vector2( 0, -99.9964 )
+scale = Vector2( 0.2, 3.94379 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -100 )
+shape = SubResource( 1 )
+
+[node name="TTL-Timer" type="Timer" parent="."]
+
+[node name="Audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+pitch_scale = 2.55
+autoplay = true
+
+[node name="Audio_Impact" type="AudioStreamPlayer" parent="."]
+volume_db = 3.0
+pitch_scale = 2.55
+
+[connection signal="timeout" from="TTL-Timer" to="." method="_on_TTLTimer_timeout"]
+[connection signal="finished" from="Audio_Impact" to="." method="_on_Audio_Impact_finished"]

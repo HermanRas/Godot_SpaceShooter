@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/Images/Lasers/laserBlueSm.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Projectile/Projectile_base.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Audio/laserSmall_001.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Assets/Audio/qubodupImpactWood.ogg" type="AudioStream" id=4]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 0.646126
+height = 6.54654
+
+[node name="LaserSm" type="Area2D"]
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 4 )
+shape = SubResource( 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -1.0
+margin_right = 1.0
+margin_bottom = 8.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = 0.5
+autoplay = true
+
+[node name="Audio_Impact" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = 3.0
+pitch_scale = 2.55
+
+[connection signal="finished" from="Audio_Impact" to="." method="_on_Audio_Impact_finished"]
